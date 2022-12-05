@@ -3,7 +3,8 @@
 
 char	*ft_strcpy(char *dest, char *src)
 {
-	int i = 0;
+	int	i;
+	i = 0;
 
 	while(src[i])
 	{
@@ -12,7 +13,7 @@ char	*ft_strcpy(char *dest, char *src)
 	}
 	return(dest);
 }
-
+/*
 int	main(void)
 {
 	char str1[13] = "FirstString";
@@ -21,7 +22,8 @@ int	main(void)
 	printf("str1 before: %s\n", str1);
 	printf("str2 before: %s\n", str2);
 	ft_strcpy(str1, str2);
-	printf("str1 after: %s\n", str1);
+	printf("\nstr1 after: %s\n", str1);
 	printf("str2 after: %s\n", str2);
 	return(0);
 }
+*/

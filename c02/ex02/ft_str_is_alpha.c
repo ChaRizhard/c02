@@ -3,27 +3,25 @@
 
 int	ft_str_is_alpha(char *str)
 {
-	char a = 65;
-	char z = 122;
+	int	i;
+	i = 0;
 
-	if (str < 65 && str > 122)
+	while (str[i] != '\0')
 	{
-		write (1, "0", 1);
+		if((str[i] < 65 || str[i] > 90 && str[i] < 97 || str[i] > 122))
+		{
+			return(0);
+		}
+		i++;
 	}
-	if (str = NULL)
-	{
-		write (1, "1", 1);
-	}
-	else
-	{
-		write (1, &str, 1);
-	}
+	return(1);
 }
-
-int main ()
+/*
+int	main ()
 {
-	ft_str_is_alpha("This is a string");
-	printf(ft_str_is_alpha("This is a string"));
+	char	*str;
+	str = "string";
+	printf("%d\n", ft_str_is_alpha(str));
 	return(0);
 }
-
+*/

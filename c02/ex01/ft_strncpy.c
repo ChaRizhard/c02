@@ -3,11 +3,14 @@
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	while (*src)
+	int	i;
+	i = 0;
+	while (src[i] != '\0' && i < n)
 	{
 		dest[n] = src[n];
-		n++;
+		i++;
 	}
+	dest[i] = '\0';
 	return(dest);
 }
 
@@ -18,9 +21,8 @@ int	main()
 
 	printf("str1: %s\n", str1);
 	printf("str2: %s\n", str2);
-	ft_strncpy(&str1, &str2, 17);
+	ft_strncpy(&str1, &str2, 5);
 	printf("\nstr1: %s\n", str1);
-	printf("str2: %s\n", str2);
 	return(0);
 }
 
